@@ -1,0 +1,16 @@
+Endpoints:
+Aluno 
+Deve ser posśivel listar os alunos [GET] ✔
+Deve ser possível visualizar um aluno [GET] ✔
+Deve ser possível cadastrar um aluno [POST] ✔
+Deve ser possível editar um aluno [PUT] 
+Deve ser possível editar um aluno [PATCH] 
+Deve ser possível deletar um aluno [DELETE] 
+
+Curso 
+Deve ser possível cadastrar um curso [POST]
+Deve ser posśivel listar os curso [GET]
+Deve ser possível visualizar um curso [GET]
+Deve ser possível editar um curso [PUT]
+Deve ser possível editar um curso [PATCH]
+Deve ser possível deletar um curso [DELETE]

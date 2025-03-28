@@ -1,0 +1,20 @@
+{
+  "name": "primeira-api",
+  "version": "1.0.0",
+  "description": "Criação de uma API usando o framework express para a disciplina de programação web",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "node --watch src/index",
+    "nodemon": "nodemon -L src/index"
+  },
+  "author": "Junior S. Gomes",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
