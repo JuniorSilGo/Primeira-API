@@ -5,6 +5,8 @@ let port = 3000;
 
 app.use(express.json());
 
+// ROTAS ALUNOS:
+
 let alunos = [];
 
 app.get("/alunos/listar", (_req, res) => {
@@ -86,6 +88,7 @@ app.patch("/alunos/atualizarParcial/:id", (req, res) => {
 
 });
 
+// ROTAS CURSOS:
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
