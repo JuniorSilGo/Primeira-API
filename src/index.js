@@ -1,9 +1,31 @@
 // let express = require('express'); -> para usar o require remover a linha "type":"modules" no package.json e apagar a linha abaixo.
 import express from 'express';
+import { atualizarAluno, criarAluno, deleterAluno, listarAlunos, visualizarAluno } from '../controllers/alunosController.js';
+import { atualizarCurso, criarCurso, listarCursos, deleterCurso, visualizarCurso } from '../controllers/cursosController.js';
 let app = express();
 let port = 3000;
 
 app.use(express.json());
+
+app.post("/aluno", criarAluno);
+app.get("/aluno", listarAlunos);
+app.get("/aluno/:id", visualizarAluno);
+app.put("/alunos/:id", atualizarAluno);
+app.delete("/alunos/:id", deleterAluno)
+
+app.post("/curso", criarCurso);
+app.get("/curso", listarCursos);
+app.get("/curso/:id", visualizarCurso);
+app.put("/cursos/:id", atualizarCurso);
+app.delete("/cursos/:id", deleterCurso);
+
+
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
+/*
 
 // ROTAS ALUNOS:
 
@@ -205,6 +227,6 @@ app.delete("/cursos/excluir/:id", (req, res) => {
 
 // 
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+
+
+*/
