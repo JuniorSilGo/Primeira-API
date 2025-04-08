@@ -9,11 +9,11 @@ const setAlunos = (aluno) => alunos.push(aluno);
 //Para cursos:
 const getCursos = () => cursos;
 
-const SetCursos = (curso) => cursos.push(curso);
+const setCursos = (curso) => cursos.push(curso);
 
 export {
     getAlunos,
     setAlunos,
     getCursos,
-    SetCursos,
+    setCursos,
 };

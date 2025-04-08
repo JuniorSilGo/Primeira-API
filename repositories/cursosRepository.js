@@ -1,35 +1,35 @@
-import { getCursos, SetCursos } from "../src/db.js";
+import { getCursos, setCursos } from "../src/db.js";
 
 
-function createCurso(curso) {
-    SetCursos(curso);
+function create(curso) {
+    setCursos(curso);
 };
 
-function findOneCurso(id) {
-    return getCursos()[id-1];
+function findOne(id) {
+    const cursos = getCursos();
+    let resultado = cursos.find((curso) => curso.id === id);
+    return resultado;
 };
 
-function findAllCursos() {
+function findAll() {
     return getCursos();
 };
 
-function updateCurso(id, curso) {
+function update(id, curso) {
     let cursos = getCursos();
     cursos[id - 1] = curso;
 
 };
 
-function destroyCurso(id) {
-    // let busca = getAlunos().filter((aluno) => aluno.id !== id);
-    // alunos = busca;
+function destroy(id) {
     let cursos = getCursos();
     cursos.splice(id-1, 1);
 };
 
 export {
-    createCurso,
-    findOneCurso,
-    findAllCursos,
-    updateCurso,
-    destroyCurso,
+    create,
+    findOne,
+    findAll,
+    update,
+    destroy,
 };

@@ -1,35 +1,35 @@
 import { getAlunos, setAlunos } from "../src/db.js";
 
 
-function createAluno(aluno) {
+function create(aluno) {
     setAlunos(aluno);
 };
 
-function findOneAluno(id) {
-    return getAlunos()[id-1];
+function findOne(id) {
+    const alunos = getAlunos();
+    let resultado = alunos.find((aluno) => aluno.id === id);
+    return resultado;
 };
 
-function findAllAlunos() {
+function findAll() {
     return getAlunos();
 };
 
-function updateAluno(id, aluno) {
+function update(id, aluno) {
     let alunos = getAlunos();
     alunos[id - 1] = aluno;
 
 };
 
-function destroyAluno(id) {
-    // let busca = getAlunos().filter((aluno) => aluno.id !== id);
-    // alunos = busca;
+function destroy(id) {
     let alunos = getAlunos();
     alunos.splice(id-1, 1);
 };
 
 export {
-    createAluno,
-    findOneAluno,
-    findAllAlunos,
-    updateAluno,
-    destroyAluno,
+    create,
+    findOne,
+    findAll,
+    update,
+    destroy,
 };
