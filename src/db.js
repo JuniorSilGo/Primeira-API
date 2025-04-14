@@ -1,19 +1,8 @@
-let alunos = [];
-let cursos = [];
 
-//Para alunos:
-const getAlunos = () => alunos;
+import knex from 'knex';
+import config from './knexfile';
 
-const setAlunos = (aluno) => alunos.push(aluno);
+const environment = process.env.NODE_ENV || 'development';
+const db = knex(config[environment]);
 
-//Para cursos:
-const getCursos = () => cursos;
-
-const setCursos = (curso) => cursos.push(curso);
-
-export {
-    getAlunos,
-    setAlunos,
-    getCursos,
-    setCursos,
-};
+export default db;
